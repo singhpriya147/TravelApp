@@ -1,0 +1,13 @@
+.main-warpper{
+ display: flex;
+ gap: 2rem;
+
+ justify-content: space-between;
+margin:2rem
+}
+
+@media(max-width:720px) {
+ .main-warpper{
+  flex-wrap: wrap;
+ }
+}
