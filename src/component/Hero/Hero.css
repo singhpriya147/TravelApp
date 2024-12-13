@@ -251,3 +251,25 @@ top: -19px;
 .hero-search-btn:hover {
   background-color: #019374;
 }
+
+.search-form{
+  display: flex;
+  gap: 2rem;
+
+  width: 25rem;
+  position: absolute;
+  left: 0;
+  align-items: center;
+  padding: 1rem;
+}
+@media (max-width:720px) {
+  .hero-text{
+   font-size: 5rem;
+    bottom: 12rem;
+
+  }
+  .search-form{
+   width: 21rem;
+    left: 6rem;
+  }
+}

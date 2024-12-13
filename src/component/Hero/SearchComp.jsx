@@ -1,6 +1,7 @@
 import { properties } from '../../data/data';
 import { useContext ,useState} from 'react';
 import { AppContext } from '../../Context';
+import './Hero.css'
 import { IoIosArrowRoundForward } from 'react-icons/io';
 const SearchComp = () => {
 
@@ -31,16 +32,8 @@ const handleChange = (e) => {
         action='
 '
         onSubmit={submitHandler}
-        style={{
-          display: 'flex',
-          gap: '2rem',
-
-          width: '25rem',
-          position: 'absolute',
-          left: '0',
-          alignItems: 'center',
-          padding: '1rem',
-        }}
+        className='search-form'
+        
       >
         <input
           type='text'
@@ -59,7 +52,7 @@ const handleChange = (e) => {
           type='submit'
           style={{
             position: 'absolute',
-            right: '0.2rem',
+            right: '1.2rem',
             backgroundColor: '#11a176',
             height: '2rem',
             display: 'flex',
