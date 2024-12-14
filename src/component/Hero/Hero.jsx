@@ -2,26 +2,29 @@
 import './Hero.css';
 import SearchComp from './SearchComp';
 import { HiOutlineShoppingCart } from 'react-icons/hi2';
+import { RxHamburgerMenu } from 'react-icons/rx';
+import { useState } from 'react';
 const Hero = () => {
-
+const [click, setClick] = useState(false);
+const handleClick = () => setClick(!click);
 
   return (
     <div className='hero-container'>
       <div style={{ display: 'flex' }}>
         <header className='hero-header'>
-          <nav className='hero-nav'>
+          <nav className={click ? 'nav-options active' : 'nav-options'}>
             <ul>
               <li>
-                <a href='#'>Tour</a>
+                  Tour
               </li>
               <li>
-                <a href='#'>Documents</a>
+                Documents
               </li>
               <li>
-                <a href='#'>Insurance</a>
+                Insurance
               </li>
               <li>
-                <a href='#'>About Us</a>
+                About Us
               </li>
             </ul>
           </nav>
@@ -42,10 +45,13 @@ const Hero = () => {
                 <span>USD</span>
               </div>
               <div className='hero-cart'>
-                <HiOutlineShoppingCart  style={{height:'20px',width:'20px', color:'grey'}}/>
+                <HiOutlineShoppingCart
+                  style={{ height: '20px', width: '20px', color: 'grey' }}
+                />
               </div>
             </div>
           </div>
+          <RxHamburgerMenu className='hamburger' onClick={handleClick} />
         </header>
       </div>
       <div className='hero-text'>
